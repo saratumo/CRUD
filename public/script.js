@@ -1,13 +1,13 @@
 let usName = document.getElementById('usName');
-let usPassword = document.getElementById('usPassword');
-let usEmail = document.getElementById('usEmail');
+let usPrice = document.getElementById('usPrice');
+let usCode = document.getElementById('usCode');
 
-function getVal(){
-    fetch("/addName",{
+function getVal() {
+    fetch("/addName", {
         method: "POST",
-        headers:{
+        headers: {
             "Content-Type": "application/json"
-        },     
-        body:JSON.stringify({ name: usName.value, password: usPassword.value, email: usEmail.value})
+        },
+        body: JSON.stringify({ name: usName.value, price: usPrice.value, code: usCode.value })
     })
 }
